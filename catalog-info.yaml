@@ -1,0 +1,22 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: yviol11qh-go-gitops
+  description: This is GitOps manifest for yviol11qh-go   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:    
+    argocd/app-name: yviol11qh-go
+    backstage.io/kubernetes-id: yviol11qh-go 
+    backstage.io/techdocs-ref: dir:.
+    janus-idp.io/tekton: yviol11qh-go 
+    github.com/project-slug: rhtap-test-organization-jk/yviol11qh-go-gitops 
+spec:
+  type: gitops
+  owner: user:guest 
+  lifecycle: experimental
+  dependsOn:
+    - component:yviol11qh-go
